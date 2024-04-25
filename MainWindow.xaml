@@ -1,0 +1,50 @@
+﻿<Window x:Class="JUSTDOIT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JUSTDOIT"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" AllowsTransparency="True" WindowStyle="None" Opacity="0.95">
+    <Window.Background>
+        <ImageBrush ImageSource="images/sekiro-shadows-die-twice.jpg"/>
+    </Window.Background>
+
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30px"></RowDefinition>
+            <RowDefinition Height="30px"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+
+        <Grid Grid.Row="0" x:Name="ToolBar" Background="#B1000000" MouseDown="ToolBar_MouseDown">
+
+
+            <Grid HorizontalAlignment="Left">
+                <Border BorderBrush="Red" BorderThickness="2">
+                    <TextBlock HorizontalAlignment="Left" Text="JUSTDOIT" FontSize="20px" Foreground="Red"></TextBlock>
+                </Border>
+            </Grid>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Height="25px" Width="50px" Margin="0 0 10 0" x:Name="Rol_up_button" Click="Rol_up_button_Click">
+                    <Image Height="25px" Width="50px" Source="images/rol_up.png" />
+                </Button>
+                <Button Height="25px" Width="50px" x:Name="Close_button" Click="Close_button_Click">
+                    <Image Height="25px" Width="50px" Source="images/close.png"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <Frame Grid.RowSpan="2" Grid.Row="1"  x:Name="Main_Frame">
+
+        </Frame>
+
+        
+    </Grid>
+
+</Window>
